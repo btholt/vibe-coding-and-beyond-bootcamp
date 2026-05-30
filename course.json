@@ -6,13 +6,13 @@
       "image": "author.jpg"
     },
     {
-      "name": "Evil Brian Holt",
-      "company": "Evil Corp",
+      "name": "Brandon Middleton",
+      "company": "Replit",
       "image": "author-2.jpg"
     }
   ],
-  "title": "Next.js Course Starter Kit",
-  "subtitle": "for Frontend Masters",
+  "title": "Beyond Vibe Coding",
+  "subtitle": "Bootcamp",
   "frontendMastersLink": "https://frontendmasters.com/",
   "social": {
     "linkedin": "btholt",
@@ -20,9 +20,8 @@
     "twitter": "holtbt",
     "bluesky": "brianholt.me"
   },
-  "description": "A starter kit for making really amazing courses, optimized for Frontend Masters",
-  "keywords": ["your", "Google", "keywords", "here"],
-  "productionBaseUrl": "/next-course-starter",
+  "description": "Learn not only how to vibe code better, but come learn how to code and how to ship better products faster",
+  "keywords": ["vibe coding", "Replit", "JavaScript", "AI", "LLM"],
   "csvPath": "./out/lessons.csv",
   "llmFullTextPath": "./out/llms.txt"
 }
