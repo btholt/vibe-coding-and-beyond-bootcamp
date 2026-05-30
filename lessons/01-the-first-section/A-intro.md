@@ -1,18 +1,176 @@
----
-title: "Introduction"
-description: "The introduction to this course."
-keywords:
-  - A course starter
-  - Next.js
-  - React
-  - Brian Holt
+# Beyond Vibe Coding — Workshop Curriculum Outline
+
+_Working draft for Brian + Brandon handshake and FEM coordination. Topic-first; day mapping to follow once content is locked._
+
 ---
 
-Hello! And welcome to the Next.js course starter by [Brian Holt][twitter].
+## Premise & audience
 
-![Cat, dog, and rat logo for the course](/next-course-starter/images/BRAND-WHearts.png)
+A 5-day bootcamp partnership between Frontend Masters and Replit. The student walks in tech-enabled but not coding — adjacent to engineering (law, medicine, accounting, business, data) and may have poked at Replit or other agentic platforms and gotten stuck the first time an agent couldn't immediately solve their problem.
 
-This is a course starter specifically made for making online courses and optimized for use with [Frontend Masters][fem].
+The arc takes them from "I want to vibe code" to "I can read agent output, supervise an agent, and ship something I'm proud of." The course is a clean on-ramp to deeper Frontend Masters material — not a substitute for it. Students who want to go deeper get pointed to Complete Intro to Web Dev v3, Complete Intro to Databases v2, and friends.
 
-[twitter]: https://twitter.com/holtbt
-[fem]: https://www.frontendmasters.com
+Brandon (Replit, head of education) takes day 1 in full. Brian takes days 2–5 in half-to-two-thirds-day chunks. The course will be recorded and posted free as marketing for both companies, so content is concept-heavy and tool-light wherever possible — the goal is a multiple year shelf life.
+
+Replit is providing students free premium accounts. No student should be required to spend money to take the course; where money would normally be required, the curriculum provides workarounds (stub-it-out prompts, free tiers, local alternatives).
+
+---
+
+## Narrative arc
+
+1. **Vibe code something cool.** (Brandon, day 1.) Wow moment. Students ship something they're personally invested in.
+2. **Hit a wall.** (Brandon → Brian handoff.) Agents are limited by how well they are instructed. Students feel it.
+3. **Structure helps.** (Brian, day 2.) The planning loop, the structured prompt, version control, deeper IDE literacy. Same idea, dramatically better result.
+4. **Big projects expose the gap.** (Brian, day 3 start.) Walk a medium-large codebase, watch the agent flail without context, watch the student get lost.
+5. **Time to learn enough.** (Brian, day 3.) Reading code: HTML, CSS, JS-in-browser vs JS-on-server, the TS elephant. Survey only — fluency comes from FEM follow-ups.
+6. **Tools to supervise.** (Brian, day 4.) Debugging methodology, databases through Replit's lens, secrets, third-party APIs.
+7. **Apply what we learned.** (Brian, day 5.) Repair the broken canned project (callback). Rebuild with technical rigor (callback). Deploy. Launch.
+
+The arc is intentionally subversive: a "vibe coding" course that teaches them not to rely purely on vibes. The pitch is _better_ vibe coding; the payoff is code literacy.
+
+---
+
+## Threading concepts (recurring throughout)
+
+- **The Planning Loop.** Idea dump → chat AI → organized spec → agent input. Introduced day 2, reused every project moment afterward.
+- **The structured prompt framework.** Anthropic 10-step or close cousin. Taught once, reused everywhere.
+- **Mental model: "the world's fastest intern."** Infinite patience, no memory between conversations, aggressively confident. You're the craftsperson; you're responsible for what ships. A craftsperson doesn't blame their tools.
+- **Personal project as parallel homework.** Each day ends with "apply today's lesson to your own project." Builds compound learning, drives in-class questions, gives the recording natural cadence.
+- **The canned project across three states.** One project — likely a habit tracker — appears in: (a) naive vibe-coded, (b) deliberately broken/messy, (c) rebuilt with rigor. Three callback moments.
+- **Code-reading exercises.** Short practiced reps throughout the survey segments — "explain this function in plain English," "find the bug," "do you trust this diff?" Not one block, distributed.
+- **Replit-first, landscape-aware.** Stay in Replit's walled garden but acknowledge the larger ecosystem. Principles transfer; specifics don't.
+
+---
+
+## Module list — Brandon's day
+
+_Roughly 5–6 instructional hours. This outline is for Brandon to get started with - he's free to add, remove, or change anything._
+
+### B1 — Welcome, Replit Anatomy Tour, Account Setup
+
+Pre-work check (Replit, GitHub, chat AI account of choice). IDE walkthrough: file tree, console, shell, agent panel, diff view, DB tab, secrets, checkpoints panel. Goal: every student knows where everything is before they need it.
+
+### B2 — Meet the Agent: Your First Prompt
+
+Two-sentence prompt → ship a tiny thing. Establish the "world's fastest intern" mental model. Land the idea that the agent is a tool the student supervises, not a magic box.
+
+### B3 — Project Scoping & Build Your Own
+
+The wow moment. Students build something _they_ care about. Scope guidelines enforced:
+
+- Must support multiple users (auth)
+- Must retain data (DB)
+- Must have multiple pages (routing)
+- No real payments (stub it out)
+- No third-party APIs beyond what Replit scaffolds
+- No real-world integrations (no Stripe, no Twilio, no real email send)
+
+A menu of canned ideas provided for students who didn't bring one. Students should leave day 1 with something working that they're proud of.
+
+### B4 — Where Agents Hit Walls
+
+Honest framing that sets up Brian's day 2. Specific failure modes Brandon names live so students feel them. Brian & Brandon to coordinate on the wall they hit and the rememdy Brian walks through.
+
+---
+
+## Module list — Brian's days
+
+_Roughly 16–20 instructional hours across 4 half-to-two-thirds days._
+
+### Structure & supervision
+
+#### S1 — The Planning Loop
+
+Raw idea → chat AI conversation → organized spec → agent input. Live demo: 2-sentence prompt vs 50-line spec on the same project, dramatic delta. The meta-skill of the course — if students retain nothing else, they should retain this workflow.
+
+#### S2 — The Structured Prompt Framework
+
+Named template (Anthropic 10-step or equivalent): context, goal, constraints, tech preferences, anti-goals, success criteria, edge cases. Students take the template home and reuse forever. Reusable artifact, not a vibe.
+
+#### S3 — Replit IDE Deeper Dive
+
+Reinforce Brandon's tour where the supervision skills live: diff review, checkpoints in practice, the agent's working memory, what context the agent has at any moment.
+
+#### S4 — Version Control: Checkpoints, Git, GitHub
+
+"When the agent breaks everything, how do you go back?" Checkpoints first (Replit-native, immediately usable), Git concepts second, GitHub for shareability and the bridge to the wider engineering world. Conceptual `git status` / `git commit` / branches — not fluency, recognition.
+
+### Reading code
+
+#### R1 — JavaScript in the Browser vs JavaScript on the Server
+
+The thing that confuses everyone learning Node. Disambiguate up front. What runs where, why it matters when reading agent output, why a `console.log` shows up in the terminal sometimes and the browser sometimes.
+
+#### R2 — HTML & CSS Survey
+
+Reading-oriented. DOM, tags, attributes, selectors, what Tailwind classes compile to. Light and fast. Recognition only — pointer to Complete Intro to Web Dev v3 for fluency.
+
+#### R3 — JavaScript Survey for Reading
+
+Variables, functions, control flow, async/await at a recognition level. Modules and imports — what `import` lines tell you about a file's dependencies. **Trace data flow** as the primary skill, not write fluency. This is the segment that earns the course's promise.
+
+#### R4 — The TypeScript Elephant
+
+15 minutes. "TS is JS with type annotations you can mostly ignore while reading." Read past the colons. Don't panic at interfaces. Note when types are actually load-bearing for understanding (return types of functions you're calling).
+
+#### R5 — Code Reading Workshop
+
+Practiced exercises distributed across R2–R4 rather than one block. Three flavors:
+
+- **Explain this:** read a function, write what it does in plain English
+- **Find the bug:** here's broken code, locate the problem
+- **Do you trust this diff?** the agent proposed this change; should you accept it?
+
+### Infrastructure literacy
+
+#### I1 — Walking a Medium-Large Project
+
+Take a real-ish codebase with no README and no `CLAUDE.md`. Let students try to vibe on it. Show two honest failures: agent gets lost without context, student gets lost navigating. Not the agent's fault — this is what undertrained supervision looks like.
+
+#### I2 — Debugging Methodology
+
+Read the error message first. Check the console. Check the network tab. Narrow vs broad prompts to the agent. **What context to feed back to the LLM — separating signal from noise.** When to revert, when to push forward. This is arguably the highest-leverage segment in the course.
+
+#### I3 — Databases Through Replit's Lens
+
+"A database is a spreadsheet you can ask questions of with SQL." Open the DB tab, run a SELECT, see your app's actual data. Goal: stop being afraid of the DB tab, investigate problems instead of avoiding them. Pointer to Complete Intro to Databases v2 for depth.
+
+#### I4 — Secrets, APIs, and Stubbing the Hard Stuff
+
+Replit Secrets for env vars and API keys (what they are, why they're not in the code). Third-party APIs at a concept level. Canned prompt snippets for getting past blockers: "stub out payments, fake the checkout flow"; "use a hardcoded user instead of real auth for now." Keeping the course money-free for students.
+
+### Synthesis & launch
+
+#### X1 — Repair the Broken Canned Project
+
+Same canned project from earlier, deliberately broken in pedagogically interesting ways. Students apply: structured prompts, code reading, debugging methodology, DB inspection. The "I can actually do this now" moment that justifies the previous two days of work.
+
+#### X2 — Technical Prompting: The Rebuild with Rigor
+
+Same project again, fresh start. This time the prompt has opinions: "Use Next.js, Tailwind, Drizzle, Postgres. Write tests. Use this design system." Compare side by side to the vibe-coded original. Show that being technical in the prompt — even when you don't fully understand every choice — produces dramatically more maintainable software.
+
+#### X3 — Deployment to Production
+
+Replit Deployments. The difference between preview-in-the-IDE and a URL their mom can hit on her phone. Briefly: domains, polish, what "production" actually means at this scale.
+
+#### X4 — Light Analytics & Launch Mentality
+
+Replit's built-in deployment analytics. Gesture at Plausible / Vercel Analytics for when they outgrow Replit. "Launch and learn" — don't polish forever, ship and iterate.
+
+#### X5 — Capstone: Launch Your Own
+
+Personal project from day 1, now with 4 days of learning poured into it. Brian roaming, helping individuals ship. Students leave with a live URL they want to send to their mom.
+
+---
+
+## Decisions needed before locking content
+
+1. **Brandon's B4 framing.** The specific failure mode Brandon names sets up everything Brian does after. Align on exact language.
+1. **Canned project.** Habit tracker is the working bet. Confirm before authoring three states.
+1. **Structured prompt framework.** Anthropic 10-step is leading. Lock the actual template.
+1. **Pre-work final list.** Replit account (provided), GitHub account, chat AI of choice. Anything else? Ollama mentioned for self-host but probably not required.
+1. **Replit's Ongoing Commitment.** We intend on this course living a long time - can they provide all students with 1 week / 1 month / 1 year of premium? Let's do something that is sustainable for Replit.
+1. **Project scope guidelines for day 1.** Approve the list above as the actual rules Brandon enforces.
+1. **Capstone scope guidelines.** Same idea, applied to launch day. Draft the stub-out snippet library.
+1. **Day mapping.** Pending content lock — map modules to Brandon's day and Brian's four halves with rough time per module.
+1. **Recording vs live cadence.** Daily homework framing for the recording. Likely visible "do this, come back tomorrow" gaps with timestamps, matching Brian's existing bootcamp pattern.
