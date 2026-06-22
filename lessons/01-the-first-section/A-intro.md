@@ -6,171 +6,171 @@ _Working draft for Brian + Brandon handshake and FEM coordination. Topic-first; 
 
 ## Premise & audience
 
-A 5-day bootcamp partnership between Frontend Masters and Replit. The student walks in tech-enabled but not coding — adjacent to engineering (law, medicine, accounting, business, data) and may have poked at Replit or other agentic platforms and gotten stuck the first time an agent couldn't immediately solve their problem.
+A 5-day bootcamp partnership between Frontend Masters and Replit. The student walks in tech-enabled but not coding — adjacent to engineering (law, medicine, accounting, business, data) and likely has poked at Lovable, v0, or Replit and gotten stuck the first time an agent couldn't immediately solve their problem.
 
-The arc takes them from "I want to vibe code" to "I can read agent output, supervise an agent, and ship something I'm proud of." The course is a clean on-ramp to deeper Frontend Masters material — not a substitute for it. Students who want to go deeper get pointed to Complete Intro to Web Dev v3, Complete Intro to Databases v2, and friends.
+The arc takes them from "I want to vibe code in Replit" to "I can read code, work alongside AI in a real editor, supervise an agent with intent, and ship something I'm proud of." The course is a clean on-ramp to deeper Frontend Masters material — not a substitute for it.
 
-Brandon (Replit, head of education) takes day 1 in full. Brian takes days 2–5 in half-to-two-thirds-day chunks. The course will be recorded and posted free as marketing for both companies, so content is concept-heavy and tool-light wherever possible — the goal is a multiple year shelf life.
+**Brandon (Replit, head of education) takes day 1 in full and owns the complete Replit-native AI app-building arc** — ship something, hit a wall, debug and prompt better, ship something better. Students leave day 1 with a deployed Replit app they care about.
 
-Replit is providing students free premium accounts. No student should be required to spend money to take the course; where money would normally be required, the curriculum provides workarounds (stub-it-out prompts, free tiers, local alternatives).
+**Brian takes days 2–5** and owns the engineering on-ramp — code literacy, AI-assisted coding in VS Code, technical prompting, code-aware debugging, and a capstone where students build something new with the full toolkit.
+
+The course will be recorded and posted free as marketing for both companies. Content is concept-heavy and tool-light wherever possible — the goal is a 5+ year shelf life.
+
+Replit is providing students free premium accounts for one year. Brian's portion uses VS Code + GitHub Copilot + Copilot CLI as the primary toolchain (generous free tiers), with Cursor, Gemini CLI, Claude Code, and Codex covered as alternatives. No student should be required to spend money to take the course.
 
 ---
 
 ## Narrative arc
 
-1. **Vibe code something cool.** (Brandon, day 1.) Wow moment. Students ship something they're personally invested in.
-2. **Hit a wall.** (Brandon → Brian handoff.) Agents are limited by how well they are instructed. Students feel it.
-3. **Structure helps.** (Brian, day 2.) The planning loop, the structured prompt, version control, deeper IDE literacy. Same idea, dramatically better result.
-4. **Big projects expose the gap.** (Brian, day 3 start.) Walk a medium-large codebase, watch the agent flail without context, watch the student get lost.
-5. **Time to learn enough.** (Brian, day 3.) Reading code: HTML, CSS, JS-in-browser vs JS-on-server, the TS elephant. Survey only — fluency comes from FEM follow-ups.
-6. **Tools to supervise.** (Brian, day 4.) Debugging methodology, databases through Replit's lens, secrets, third-party APIs.
-7. **Apply what we learned.** (Brian, day 5.) Repair the broken canned project (callback). Rebuild with technical rigor (callback). Deploy. Launch.
+1. **Brandon, day 1.** Ship something cool with Replit. Hit a wall. Learn to debug and prompt better. Ship something cooler. The complete Replit experience, end to end.
+2. **Brian, day 2.** Bridge — let's look at what code actually says. Survey HTML, CSS, JS, TS just enough to read what an agent ships.
+3. **Brian, day 3.** AI-assisted coding in a real editor. VS Code, Copilot, Copilot CLI, the wider landscape. Git and GitHub. Walking a real vibe-coded codebase.
+4. **Brian, day 4.** Now that you can read code, prompt and debug like it. Technical prompts, code-aware debugging, databases through code, secrets and APIs done with intent.
+5. **Brian, day 5.** Capstone — build something new, end to end, with the full toolkit.
 
-The arc is intentionally subversive: a "vibe coding" course that teaches them not to rely purely on vibes. The pitch is _better_ vibe coding; the payoff is code literacy.
+The arc says: Replit gives you one capable environment; coding alongside AI in a local editor gives you another. Knowing which to reach for, and being able to read what either produces, is the actual skill.
 
 ---
 
 ## Threading concepts (recurring throughout)
 
-- **The Planning Loop.** Idea dump → chat AI → organized spec → agent input. Introduced day 2, reused every project moment afterward.
-- **The structured prompt framework.** Anthropic 10-step or close cousin. Taught once, reused everywhere.
-- **Mental model: "the world's fastest intern."** Infinite patience, no memory between conversations, aggressively confident. You're the craftsperson; you're responsible for what ships. A craftsperson doesn't blame their tools.
-- **Personal project as parallel homework.** Each day ends with "apply today's lesson to your own project." Builds compound learning, drives in-class questions, gives the recording natural cadence.
-- **The canned project across three states.** One project — likely a habit tracker — appears in: (a) naive vibe-coded, (b) deliberately broken/messy, (c) rebuilt with rigor. Three callback moments.
-- **Code-reading exercises.** Short practiced reps throughout the survey segments — "explain this function in plain English," "find the bug," "do you trust this diff?" Not one block, distributed.
-- **Replit-first, landscape-aware.** Stay in Replit's walled garden but acknowledge the larger ecosystem. Principles transfer; specifics don't.
+- **"The world's fastest intern" mental model.** Established by Brandon on day 1. Brian reinforces throughout — same intern, more languages spoken to it.
+- **Different tools for different shapes of problems.** Not a graduation from Replit — students leave with both Replit and a local coding toolkit, and the real skill is knowing which to reach for. Brian uses Replit for plenty of work he could code from scratch; the choice is about fit, not capability. Anecdote material for live delivery.
+- **Code-reading exercises distributed.** Three flavors threaded through the reading modules: explain this function in plain English, find the bug, do you trust this diff?
+- **Tool landscape, principles first.** Brian primarily teaches VS Code + Copilot + Copilot CLI. Cursor, Gemini CLI, Claude Code, Codex covered as alternatives. Students use what they want or what they're already paying for. Principles transfer.
 
 ---
 
-## Module list — Brandon's day
+## Brandon's day — outcomes Brian needs
 
-_Roughly 5–6 instructional hours. This outline is for Brandon to get started with - he's free to add, remove, or change anything._
+Brandon owns day 1 in full. His current draft ("Impactful Apps with Replit Agent") covers Replit workspace orientation, a quick-win Design Canvas build, MVP scoping (self → friends/coworkers → world), prompting with context, agent workflow (rapid iteration vs. hands-off barbell model), debugging (Reproduce → Isolate → Verify), data persistence, deployment, and maintenance.
 
-### B1 — Welcome, Replit Anatomy Tour, Account Setup
+For Brian's portion to land cleanly, day 1 needs to produce:
 
-Pre-work check (Replit, GitHub, chat AI account of choice). IDE walkthrough: file tree, console, shell, agent panel, diff view, DB tab, secrets, checkpoints panel. Goal: every student knows where everything is before they need it.
+- Every student has a deployed Replit app they personally care about
+- Students are fluent in the Replit workspace, agent flows, and checkpoints
+- Students have a working mental model for the agent and a starting vocabulary for prompting
+- Students have at least felt agents hitting walls — Brandon names this honestly
+- Bridge handed off: "Brian is going to teach you what's actually inside the apps you just built"
 
-### B2 — Meet the Agent: Your First Prompt
+Outstanding handshake items with Brandon listed in the Decisions section below.
 
-Two-sentence prompt → ship a tiny thing. Establish the "world's fastest intern" mental model. Land the idea that the agent is a tool the student supervises, not a magic box.
+---
 
-### B3 — Project Scoping & Build Your Own
+## Daily homework cadence
 
-The wow moment. Students build something _they_ care about. Scope guidelines enforced:
+Brian's portion is half-to-two-thirds days, leaving real time in the evening. Each day ends with a prompt:
 
-- Must support multiple users (auth)
-- Must retain data (DB)
-- Must have multiple pages (routing)
-- No real payments (stub it out)
-- No third-party APIs beyond what Replit scaffolds
-- No real-world integrations (no Stripe, no Twilio, no real email send)
+- **After Day 2 (Foundations).** A short code-reading exercise on a fresh small snippet. Reps for the skill they just learned, not their own project, not a canned project — just "read this, explain it."
+- **After Day 3 (Tooling).** The marquee homework: pull your Day 1 Replit app down, open it in VS Code, push it to a fresh GitHub repo, add a small feature with Copilot. Concrete proof that "your code is yours, it's just code, it moves." Lands the moment they have all the tools to do it.
+- **After Day 4 (Prompting & debugging with code knowledge).** A deliberately broken small repo to clone, diagnose, and fix using code-aware debugging. Push the fix to GitHub. This is the debugging payoff that the dropped "three states of one project" callback used to provide.
+- **Day 5 has no homework** — the capstone is the deliverable.
 
-A menu of canned ideas provided for students who didn't bring one. Students should leave day 1 with something working that they're proud of.
-
-### B4 — Where Agents Hit Walls
-
-Honest framing that sets up Brian's day 2. Specific failure modes Brandon names live so students feel them. Brian & Brandon to coordinate on the wall they hit and the rememdy Brian walks through.
+The Replit-to-VS-Code move on Day 3 is the load-bearing one; the others reinforce the day's skill in lower-stakes contexts.
 
 ---
 
 ## Module list — Brian's days
 
-_Roughly 16–20 instructional hours across 4 half-to-two-thirds days._
+Roughly 16–20 instructional hours across 4 half-to-two-thirds days.
 
-### Structure & supervision
+### Section 1 — Bridge & code foundations
 
-#### S1 — The Planning Loop
+#### F1 — The Bridge
 
-Raw idea → chat AI conversation → organized spec → agent input. Live demo: 2-sentence prompt vs 50-line spec on the same project, dramatic delta. The meta-skill of the course — if students retain nothing else, they should retain this workflow.
+Open with one of the apps students shipped yesterday. Open a file. Read it together. "This is what code actually says. By the end of the week you'll know what most of these lines mean and how to change them." Sets the table for the rest of the course.
 
-#### S2 — The Structured Prompt Framework
+#### F2 — JavaScript in the Browser vs JavaScript on the Server
 
-Named template (Anthropic 10-step or equivalent): context, goal, constraints, tech preferences, anti-goals, success criteria, edge cases. Students take the template home and reuse forever. Reusable artifact, not a vibe.
+The thing that confuses everyone learning Node. What runs where, why a `console.log` shows up in the terminal sometimes and the browser sometimes, why the agent generates two flavors of file.
 
-#### S3 — Replit IDE Deeper Dive
+#### F3 — HTML & CSS Survey
 
-Reinforce Brandon's tour where the supervision skills live: diff review, checkpoints in practice, the agent's working memory, what context the agent has at any moment.
+Reading-oriented. DOM, tags, attributes, selectors, what Tailwind classes compile to. Light and fast. Pointer to Complete Intro to Web Dev v3 for fluency.
 
-#### S4 — Version Control: Checkpoints, Git, GitHub
-
-"When the agent breaks everything, how do you go back?" Checkpoints first (Replit-native, immediately usable), Git concepts second, GitHub for shareability and the bridge to the wider engineering world. Conceptual `git status` / `git commit` / branches — not fluency, recognition.
-
-### Reading code
-
-#### R1 — JavaScript in the Browser vs JavaScript on the Server
-
-The thing that confuses everyone learning Node. Disambiguate up front. What runs where, why it matters when reading agent output, why a `console.log` shows up in the terminal sometimes and the browser sometimes.
-
-#### R2 — HTML & CSS Survey
-
-Reading-oriented. DOM, tags, attributes, selectors, what Tailwind classes compile to. Light and fast. Recognition only — pointer to Complete Intro to Web Dev v3 for fluency.
-
-#### R3 — JavaScript Survey for Reading
+#### F4 — JavaScript Survey for Reading
 
 Variables, functions, control flow, async/await at a recognition level. Modules and imports — what `import` lines tell you about a file's dependencies. **Trace data flow** as the primary skill, not write fluency. This is the segment that earns the course's promise.
 
-#### R4 — The TypeScript Elephant
+#### F5 — The TypeScript Elephant
 
-15 minutes. "TS is JS with type annotations you can mostly ignore while reading." Read past the colons. Don't panic at interfaces. Note when types are actually load-bearing for understanding (return types of functions you're calling).
+15 minutes. "TS is JS with type annotations you can mostly ignore while reading." Read past the colons. Note when types are actually load-bearing (return types of functions you're calling).
 
-#### R5 — Code Reading Workshop
+#### F6 — Code Reading Workshop (distributed)
 
-Practiced exercises distributed across R2–R4 rather than one block. Three flavors:
+Practiced exercises threaded through F3–F5, not a standalone block:
 
 - **Explain this:** read a function, write what it does in plain English
 - **Find the bug:** here's broken code, locate the problem
 - **Do you trust this diff?** the agent proposed this change; should you accept it?
 
-### Infrastructure literacy
+### Section 2 — AI-assisted coding in a real editor
 
-#### I1 — Walking a Medium-Large Project
+#### T1 — VS Code Tour & Setup
 
-Take a real-ish codebase with no README and no `CLAUDE.md`. Let students try to vibe on it. Show two honest failures: agent gets lost without context, student gets lost navigating. Not the agent's fault — this is what undertrained supervision looks like.
+Install, layout, extensions, command palette, integrated terminal, source control panel. Replit's web IDE is one capable environment; here's another with a different shape, and why having both in their toolkit matters.
 
-#### I2 — Debugging Methodology
+#### T2 — GitHub Copilot & Copilot CLI
 
-Read the error message first. Check the console. Check the network tab. Narrow vs broad prompts to the agent. **What context to feed back to the LLM — separating signal from noise.** When to revert, when to push forward. This is arguably the highest-leverage segment in the course.
+Primary tools for Brian's portion. Inline suggestions, Copilot chat, Copilot CLI for terminal-side agent work. Free tier on both. Practical: when each is the right reach.
 
-#### I3 — Databases Through Replit's Lens
+#### T3 — The AI Coding Tool Landscape
 
-"A database is a spreadsheet you can ask questions of with SQL." Open the DB tab, run a SELECT, see your app's actual data. Goal: stop being afraid of the DB tab, investigate problems instead of avoiding them. Pointer to Complete Intro to Databases v2 for depth.
+"You're not married to Microsoft tools." Honest tour of Cursor, Gemini CLI, Claude Code, Codex. Different shapes of problem suit different tools. Brian shares what he uses and when. Students use whatever they already have or pay for. Principles transfer.
 
-#### I4 — Secrets, APIs, and Stubbing the Hard Stuff
+#### T4 — Git & GitHub
 
-Replit Secrets for env vars and API keys (what they are, why they're not in the code). Third-party APIs at a concept level. Canned prompt snippets for getting past blockers: "stub out payments, fake the checkout flow"; "use a hardcoded user instead of real auth for now." Keeping the course money-free for students.
+"When the agent breaks everything, how do you go back?" Conceptual `git status` / `git commit` / branches / push / pull / PRs. Recognition, not fluency. Students leave with a GitHub profile and at least one repo of their own. Load-bearing for their coding life going forward.
 
-### Synthesis & launch
+#### T5 — Walking a Real Vibe-Coded Codebase
 
-#### X1 — Repair the Broken Canned Project
+Clone a real public repo that's been vibe-coded into chaos. Show students how to navigate it, read it, and tame it with AI assistance. Two honest failures on display: AI assistant gets lost without context, student gets lost navigating. Motivates section 3.
 
-Same canned project from earlier, deliberately broken in pedagogically interesting ways. Students apply: structured prompts, code reading, debugging methodology, DB inspection. The "I can actually do this now" moment that justifies the previous two days of work.
+### Section 3 — Better prompting & debugging with code knowledge
 
-#### X2 — Technical Prompting: The Rebuild with Rigor
+#### P1 — Technical Prompting: Speaking the Language
 
-Same project again, fresh start. This time the prompt has opinions: "Use Next.js, Tailwind, Drizzle, Postgres. Write tests. Use this design system." Compare side by side to the vibe-coded original. Show that being technical in the prompt — even when you don't fully understand every choice — produces dramatically more maintainable software.
+Now that students know words like Next.js, Tailwind, Drizzle, useState, async, they can prompt with intent. The same idea prompted casually vs prompted technically — show the delta. Specifying tests, design system, ORM, error handling becomes natural.
 
-#### X3 — Deployment to Production
+#### P2 — Code-Aware Debugging
 
-Replit Deployments. The difference between preview-in-the-IDE and a URL their mom can hit on her phone. Briefly: domains, polish, what "production" actually means at this scale.
+Read the error message first. Read the actual code path. Check the console, network tab, terminal. **What context to feed back to the LLM — separating signal from noise**, now informed by being able to read the code yourself. When to revert, when to push forward. Arguably the highest-leverage segment in the week.
 
-#### X4 — Light Analytics & Launch Mentality
+#### P3 — Databases Through Code
 
-Replit's built-in deployment analytics. Gesture at Plausible / Vercel Analytics for when they outgrow Replit. "Launch and learn" — don't polish forever, ship and iterate.
+"A database is a spreadsheet you can ask questions of with SQL." Now extend: what an ORM is (Drizzle, Prisma), what a migration is, what a schema file says. Open the DB, run a SELECT, but also trace the data from the schema file to the API call to the UI. Pointer to Complete Intro to Databases v2 for depth.
 
-#### X5 — Capstone: Launch Your Own
+#### P4 — Secrets, APIs, and Environment in VS Code
 
-Personal project from day 1, now with 4 days of learning poured into it. Brian roaming, helping individuals ship. Students leave with a live URL they want to send to their mom.
+`.env` files, `.gitignore`, what env vars are at the OS level vs framework level. Why you don't commit keys. Stubbing out APIs you don't want to pay for. The same workarounds students used in Replit, now done with intent and visible to them.
+
+### Section 4 — Capstone
+
+#### C1 — Plan Something New
+
+Start fresh. Apply the full prompting workflow with all the new vocabulary. Write a spec with technical opinions. Students use whatever AI coding tool they're most comfortable with.
+
+#### C2 — Build It
+
+Brian roams, helping individuals get unstuck. VS Code + Copilot is the default; alternatives welcome.
+
+#### C3 — Deploy It
+
+Deploy to Netlify. Free tier, no credit card, and Netlify DB ships managed Postgres so students don't have to wire up a separate database provider — keeps the pedagogy clean right after the database module. Connect the GitHub repo from T4, push, deploy. Mention Vercel as an equivalent alternative students can choose later.
+
+#### C4 — Launch & Analytics
+
+Light analytics (Plausible, Vercel Analytics) so they know if anyone's using it. "Launch and learn" mentality — don't polish forever. Send the URL to mom.
 
 ---
 
 ## Decisions needed before locking content
 
-1. **Brandon's B4 framing.** The specific failure mode Brandon names sets up everything Brian does after. Align on exact language.
-1. **Canned project.** Habit tracker is the working bet. Confirm before authoring three states.
-1. **Structured prompt framework.** Anthropic 10-step is leading. Lock the actual template.
-1. **Pre-work final list.** Replit account (provided), GitHub account, chat AI of choice. Anything else? Ollama mentioned for self-host but probably not required.
-1. **Replit's Ongoing Commitment.** We intend on this course living a long time - can they provide all students with 1 week / 1 month / 1 year of premium? Let's do something that is sustainable for Replit.
-1. **Project scope guidelines for day 1.** Approve the list above as the actual rules Brandon enforces.
-1. **Capstone scope guidelines.** Same idea, applied to launch day. Draft the stub-out snippet library.
-1. **Day mapping.** Pending content lock — map modules to Brandon's day and Brian's four halves with rough time per module.
-1. **Recording vs live cadence.** Daily homework framing for the recording. Likely visible "do this, come back tomorrow" gaps with timestamps, matching Brian's existing bootcamp pattern.
+1. **Brandon handshake on day 1 outcomes.** Confirm the bullets in the "Brandon's day" section above, plus the bridge handoff language for Brian's day 2 opener.
+2. **Pre-work final list.** Replit account (provided), GitHub account, VS Code installed, GitHub Copilot enabled (free tier), Copilot CLI installed, chat AI account of choice. Probably needs a 10-minute pre-work video to get everyone synced before day 2.
+3. **Canned project ideas for structured teaching.** A short menu of 3–4 small project shapes students can pick from when Brian wants the class in lockstep on examples.
+4. **Capstone scope guidelines.** Same "multi-user, persistent data, multi-page, no real payments, no real third-party integrations" frame as Brandon's day 1, applied to the capstone. Plus a stub-out snippet library.
+5. **The vibe-coded codebase for T5.** Pick a real public repo for the medium-large project tour. Needs to be chaotic enough to be instructive, small enough to navigate in 60 minutes.
+6. **The broken repo for Day 4 homework.** Author or find a deliberately broken small repo for the debugging homework. Bugs need to be code-aware-debuggable, not just "the agent fixes it."
+7. **Day mapping.** Pending content lock — map modules to Brian's four halves with rough time per module.
+8. **Recording vs live cadence.** Daily homework framing for the recording, likely visible "do this, come back tomorrow" gaps with timestamps, matching Brian's existing bootcamp pattern.
