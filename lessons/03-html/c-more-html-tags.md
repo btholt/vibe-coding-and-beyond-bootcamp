@@ -6,6 +6,14 @@ In the last lesson you wrote a webpage by hand and opened it in your browser. Th
 
 The goal of this lesson isn't to make you fluent in HTML. The goal is to give you enough HTML that you can read an `.html` file (or a `.jsx` or `.tsx` file later) and have a working idea of what each tag is doing. Recognition, not authorship.
 
+## Self-closing tags
+
+Most tags come in pairs — an opener and a closer wrapping some content, like `<h1>My Blog</h1>`. But a handful of tags have nothing to wrap: an image is just an image, an input is just a box. These are called _self-closing tags_ (or _void tags_ if you want to sound fancy), and they look like this: `<input />` or `<img src="dog.jpg" alt="a good dog" />`. That slash before the closing bracket means "I open and close in one move — don't go looking for my other half."
+
+Now the annoying part: that slash is _optional_. `<input>` with no slash and no closing tag anywhere is also perfectly valid HTML, and you'll see both styles constantly — including from your AI assistant, which will pick whichever style it's in the mood for that day. When you're reading code, just know that `input`, `img`, `br`, `meta`, and `link` never have closing tags, slash or no slash. Nothing is missing; nothing is broken.
+
+> Tuck this away for later in the course: when we get to React and JSX, that "optional" slash stops being optional. Old HTML shrugs; JSX has opinions. Future-you will nod knowingly.
+
 ## The wrapper tags
 
 Here's the skeleton you typed last lesson, with a couple of additions you'll see in basically every HTML file you ever open:

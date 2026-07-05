@@ -101,22 +101,26 @@ for (let i = 0; i < 5; i = i + 1) {
 }
 ```
 
-That top line is three statements separated by semicolons, and they always play the same three roles: **start here** (`let i = 0`), **keep going while this is true** (`i < 5`), **do this after every lap** (`i = i + 1`). The `i` is short for _index_ — it's the lap counter, and single-letter `i` is a convention so old and universal that fighting it is pointless.
+That top line is three statements separated by semicolons, and they always play the same three roles: **start here** (`let i = 0`), **keep going while this is true** (`i < 5`), **do this after every lap** (`i = i + 1`). The `i` is short for _index_ — it's the lap counter, and single-letter `i` is a convention so old it has grandkids now and so universal that fighting it is pointless.
+
+> Notice we started counting at 0, not 1. Programmers almost always count from zero — the first lap is lap 0, the first item in a list is item 0. It feels wrong for about a week and then it feels normal. For now just know that when you see let i = 0, nothing is off — that's the standard starting line — and a loop that runs while i < 5 runs five times: laps 0, 1, 2, 3, and 4. This pays off big when we get to arrays, where the first item really does live at position 0.
 
 Two bits of shorthand you'll see constantly, both meaning "add one to i": `i++` and `i += 1`. Same for `i--` (subtract one). Agents use `i++` reflexively. It's just `i = i + 1` wearing a smaller coat.
 
 Run the loop. Change the `5` to `10`. Change `i = 0` to `i = 5`. Predict what'll happen before each run — the predicting is where the learning is.
 
-Why does a loop counter matter? Because the real pattern you'll read over and over is "loop over a list and do something with each item" — for every to-do in the list, make a checkbox; for every message in the chat, render a bubble. We need to meet lists (JavaScript calls them _arrays_) before that clicks fully, and that's two lessons away. When we get there, the `for` loop is the engine under it.
+Why does a loop counter matter? Because the real pattern you'll read over and over is "loop over a list and do something with each item" — for every to-do in the list, make a checkbox; for every message in the chat, render a bubble. We need to meet lists (JavaScript calls them _arrays_) before that clicks fully, and we'll cover that more soon. When we get there, the `for` loop is the engine under it.
 
 > One heads-up so future-you isn't confused: JavaScript has several other loop flavors — `for...of`, and array methods like `.forEach()` and `.map()` that loop without looking like loops. Your assistant will sometimes emit those. Don't panic when you see them; they're all "do this once per item" in different outfits, and we'll wave at them when we get to arrays. Recognizing "this is some kind of loop" is 90% of the value.
 
 ## Reading practice
 
-Before the assistant beat, read this — don't run it yet — and predict what it logs:
+Before we talk to our AI assistant, read this — don't run it yet — and predict what it logs:
 
 ```javascript
 let losses = 0;
+
+console.log("Welcome to the game");
 
 for (let i = 0; i < 10; i++) {
   if (i % 3 === 0) {

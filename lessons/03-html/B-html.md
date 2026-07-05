@@ -74,6 +74,6 @@ A few things I want you to notice:
 - **Tags can contain other tags.** Your `<body>` contains an `<h1>`, a `<p>`, and a `<ul>`. The `<ul>` contains three `<li>` tags. This nesting is how you build up a document.
 - **The browser is forgiving.** If you mess up the HTML, the browser will usually try to render _something_ anyway. That's great when you're learning. It also hides bugs. We'll get into reading other people's HTML later in the course.
 
-Now go back and look at the Replit project you built yesterday. Open one of the files — it might be a `.html` file, or you might see `.jsx` or `.tsx` files, which we'll cover next. You'll see a lot more tags than you wrote here, and some of them will look weirder. But the foundation is the same: tags labeling content, nested inside other tags, all sitting in a text file. The agent didn't write something secret. It wrote HTML.
+Now go back and look at the Replit project you built earlier. Open one of the files — it might be a `.html` file, or you might see `.jsx` or `.tsx` files, which we'll cover next. You'll see a lot more tags than you wrote here, and some of them will look weirder. But the foundation is the same: tags labeling content, nested inside other tags, all sitting in a text file. The agent didn't write something secret. It wrote HTML.
 
 That's where we're going to keep building from. In the next lesson we'll add some CSS to make this look like something, and then we'll start poking at the JavaScript that makes things actually do stuff.

@@ -19,7 +19,7 @@ const dog = {
 };
 ```
 
-Curly braces to open and close, then `label: value` pairs separated by commas. The labels are called _keys_ (or _properties_) and each holds a value — and the values can be anything from lesson B: strings, numbers, booleans. One variable, `dog`, now carries four related facts that travel together, which beats juggling `dogName`, `dogBreed`, `dogAge`, and `dogIsGood` as separate boxes.
+Curly braces to open and close, then `label: value` pairs separated by commas. The labels are called _keys_ (or _properties_) and each holds a value — and the values can be anything from earlier lessons: strings, numbers, booleans. One variable, `dog`, now carries four related facts that travel together, which beats juggling `dogName`, `dogBreed`, `dogAge`, and `dogIsGood` as separate boxes.
 
 To reach into a compartment, you use a dot:
 
@@ -56,7 +56,7 @@ console.log(word.toUpperCase()); // "HELLO"
 console.log(word.length); // 5
 ```
 
-Strings come with built-in methods — verbs that every string knows how to do. Same with numbers and arrays and nearly everything else in JavaScript. And here's a fun retroactive reveal: `console.log()` — the thing you've typed fifty times — was a method all along. `console` is an object the browser gives you; `log` is a function inside it; the parentheses cook it. You've been reading this pattern since lesson A.
+Strings come with built-in methods — verbs that every string knows how to do. Same with numbers and arrays and nearly everything else in JavaScript. And here's a fun retroactive reveal: `console.log()` — the thing you've typed fifty times — was a method all along. `console` is an object the browser gives you; `log` is a function inside it; the parentheses cook it. You've been reading this pattern a lot now.
 
 (Also, that `.length` from last lesson's mystery function? Not a method — no parentheses — just a regular compartment holding a number. Dot means "go inside" either way.)
 
@@ -118,7 +118,7 @@ One more thing, and it's the reason this lesson punches above its weight. There'
 }
 ```
 
-Look familiar? It's objects and arrays with slightly stricter dress code (keys always in quotes, no trailing commas). When your app asks OpenAI a question, the answer comes back as JSON. When it asks a weather service for the forecast: JSON. The `package.json` file sitting in every JavaScript project you'll ever open: JSON. The notation you just spent a lesson learning to read is, almost by accident, the notation the entire internet uses to pass data around. Two lessons from now, when we start talking to real servers, the responses are going to look like — well, exactly like that snippet, and that's not a hypothetical example either. (Foreshadowing remains my favorite literary device. That and irony.)
+Look familiar? It's objects and arrays with slightly stricter dress code (keys always in quotes, no trailing commas). When your app asks OpenAI a question, the answer comes back as JSON. When it asks a weather service for the forecast: JSON. The `package.json` file sitting in every JavaScript project you'll ever open: JSON. The notation you just spent a lesson learning to read is, almost by accident, the notation the entire internet uses to pass data around. Soon, when we start talking to real servers, the responses are going to look like — well, exactly like that snippet, and that's not a hypothetical example either. (Foreshadowing remains my favorite literary device. That and irony.)
 
 ## Reading practice
 

@@ -1,4 +1,4 @@
-We've spent the last two lessons looking at HTML — writing some, touring the tags. Before we move on to CSS, there's one more conceptual thing I want to sit on, because it informs a lot of what comes next: HTML is _static_.
+We've spent the last while looking at HTML — writing some, touring the tags. Before we move on to CSS, there's one more conceptual thing I want to sit on, because it informs a lot of what comes next: HTML is _static_.
 
 By static I mean: the HTML file you wrote is just a file. It sits on your computer. When you double-click it, the browser opens it, reads it top to bottom, and renders what it sees. That's it. The file doesn't know who you are. It doesn't know what time it is. It doesn't have access to a database. It can't change itself based on who's looking at it. It's a document, the same way a Word doc is a document.
 

@@ -70,7 +70,7 @@ const isLoggedIn = true;
 const hasPaid = false;
 ```
 
-Booleans feel almost too simple to bother with, but they're the hinges the entire program swings on: every "if the user is logged in, show the dashboard; otherwise, show the login page" decision comes down to a boolean. Next lesson is entirely about those decisions, so for today just learn to recognize them. Agent-written code loves boolean variables named like yes/no questions — `isLoading`, `hasError`, `canSubmit` — and that naming convention is a gift to you, the reader. `isLoading` contains `true` or `false`, and you knew that without reading anything else. Good names really are the documentation.
+Booleans feel almost too simple to bother with, but they're the hinges the entire program swings on: every "if the user is logged in, show the dashboard; otherwise, show the login page" decision comes down to a boolean. Next lesson is entirely about those decisions, so for now just learn to recognize them. Agent-written code loves boolean variables named like yes/no questions — `isLoading`, `hasError`, `canSubmit` — and that naming convention is a gift to you, the reader. `isLoading` contains `true` or `false`, and you knew that without reading anything else. Good names really are the documentation.
 
 ## const, let, and reading intent
 

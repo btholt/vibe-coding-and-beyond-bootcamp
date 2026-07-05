@@ -67,7 +67,7 @@ greet("Rory");
 
 `name` is a _parameter_ — a labeled box that's empty in the definition and gets filled at call time. When we call `greet("Reid")`, the string `"Reid"` (the _argument_) lands in the `name` box, and the function runs with it. Same recipe, different ingredient, different output.
 
-> Parameter versus argument: the parameter is the blank in the recipe; the argument is what you actually pour in. People (me included) use the words interchangeably in conversation and nobody has ever been harmed by it.
+> Parameter versus argument: the parameter is the blank in the recipe; the argument is what you actually pour in. People (me included) use the words interchangeably (I would bet many coding veterans watching this learned this today.) In any case, don't be pedantic about it, nobody likes a pedant.
 
 Functions can take multiple inputs, separated by commas — `function addToCart(item, quantity)` — and when you read a call like `addToCart("oat milk", 2)`, the values match up to the parameters in order. First goes in the first box, second in the second.
 
