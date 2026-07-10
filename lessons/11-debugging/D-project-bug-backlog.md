@@ -1,0 +1,45 @@
+---
+description: "The most realistic project in the course: a bug backlog — seven user-filed tickets against a codebase you know, no stack traces, no hints. Reproduce, diagnose, fix on a branch, leave a tripwire on every grave — and burn the backlog down like the professional you've become."
+---
+
+You've inherited a **bug backlog** — and I use that term deliberately, because it's one you'll hear constantly in the real world: the accumulated pile of known problems, filed as tickets, waiting for someone to work through them. Every product team on earth has one; today, so do you. There's a repo — [family-recipe-box-broken][repo] — that looks _exactly_ like the recipe box you walked, ran, and changed... except somewhere along the way, seven bugs shipped. Its **Issues tab holds the backlog**: seven tickets, filed in user voice — frustrated, honest, non-technical, and containing zero stack traces, because users don't send stack traces — they send _"I clicked Save and literally nothing happened."_ Your job is the actual job: burn it down.
+
+This is the section's everything-drill, and it's also the most true-to-life project in the course. Real debugging almost never starts from an error message on your own screen; it starts from someone else's description of a gap, in a codebase you thought you understood. You have every tool this requires. Time to find out how they feel under load.
+
+Setup you know cold: fork it, clone your fork, rent a fresh Postgres (or hand the chore to the agent — you've earned that), get it running. It boots fine and mostly works, which is itself the first lesson: seven bugs deep, and the app _demos okay_. Bugs don't announce themselves at the door.
+
+## The ritual, per ticket
+
+Every ticket gets the same professional loop — this is the section, assembled into a single repeatable motion:
+
+**1. Read the ticket, then translate it.** User-speak into reproduction steps is a skill of its own: "the search is stuck" becomes _open the list page, type into the search box, observe._ Reproduce it yourself before anything else — the doctrine hasn't changed, and for one of these tickets, careful reading is most of the battle.
+
+**2. Triage.** Which world — browser, build, server, database? Loud or silent? Gather the evidence: console, Network tab, the request logger, the actual rows in the database. Walk the boundaries until good data goes in and wrong comes out.
+
+**3. Write the gap report.** Actions, expectation, reality, evidence, reproduction — even when you'll hand the hunt to the agent, _especially_ then. This is not the scavenger hunt; the assistant is a full partner today, because that's what it is when you're working a real backlog. Just remember what you feed it determines what you get: gap reports in, diagnoses out; "fix it" in, bandages out.
+
+**4. Red first.** Before the fix, the fold-in from the prevention lesson, now as standing ritual: **have the agent write a test that checks for the broken thing — and watch it fail.** "Write a unit test that captures the bug in this ticket; it should fail right now." Red proves the tripwire works and the reproduction is real. (Some tickets fit a unit test naturally; a couple are better verified by hand or by Bruno — use judgment, and where a unit test genuinely fits, insist on it.)
+
+**5. Fix, on a branch.** One branch per ticket. Watch the diff — every line, always — and interrogate the fix: root cause or bandage? Real fixes change code; bandages add it.
+
+**6. Green, plus the lap.** The new test passes, the _whole suite_ passes (the existing tests are your neighbors-lap, automated — this is why they were there), and your reproduction no longer reproduces.
+
+**7. PR, with the magic words.** Open the pull request against your fork and put **"Fixes #3"** (or whichever) in the description — GitHub links the PR to the issue and _closes the issue automatically when the PR merges._ That tiny convention is how professional repos keep tickets and fixes married, and your closed-issue trail at the end of this shift is the receipt.
+
+Every bug you fix leaves a tripwire on its grave. Say it until it's boring; do it until it's reflex.
+
+## Working the queue
+
+The tickets are roughly ordered, easiest first, and here's the no-spoilers briefing: the early ones have visible, immediate symptoms and will fall to careful observation plus one good instrument. The middle of the queue includes at least one bug where _nothing errors anywhere_ and the code in question reads as perfectly fine — trust your boundaries-walk over your code-squint. And read the final ticket very carefully, because it describes a bug with **no symptom at all in normal use** — the app looks flawless — and verifying both the bug and your fix will require Bruno and a second account. That one is the graduate ticket: if you close it properly, red test and all, you have nothing left to prove in this section.
+
+Work at least the first four; work all seven if you're having fun (you might be — that's the secret). And two rulings on what's legal:
+
+**Git history is a legitimate weapon.** "What changed recently?" is one of the oldest professional debugging questions, and `git log` plus reading suspicious diffs is not cheating — it's the time machine from the toolkit, used as intended. If a commit message says "clean up the search input" and the search input is broken... well. Detectives interview whoever was last in the room.
+
+**The healthy sibling is break-glass only.** Yes — the original `family-recipe-box-sample-app` still exists, and yes, you could diff the two repos and read off every answer. In real life there is no pristine twin of your codebase, so treat it as the answer key it is: a thing you check _after_ you've solved a ticket (satisfying) or when you've conceded one (honest), never the first move. You'll learn exactly as much as your restraint allows, and I'm not your mom.
+
+> 🤖 **Ask your AI Assistant.** The post-mortem, after the backlog's burned down — and this is the beat that closes the whole section's loop: "Here are the tickets I fixed and their PRs. Write me a post-mortem: classify each bug by genre, and for each one, tell me which prevention tool — TypeScript, ESLint, Prettier, unit tests, E2E tests — would have caught it _before it shipped_, and which would have missed it." Read that answer slowly, because it lands the section's deepest point: several of these bugs sail straight through every static checker — they're type-clean, lint-clean, beautifully formatted, and _wrong_ — and the only machines that could have caught them are tests, because tests are the only checker that knows what the code is _for_. The proofreaders guard the form; the tripwires guard the meaning; and the person who knows which guards which — that's the job title you just earned.
+
+Close your issues, merge your branches, and take the wider stock: this section handed you a loop for the unknown, a partner protocol, a prevention arsenal, and a backlog's worth of proof that you can be given nothing but a stranger's complaint and return working software. One section remains, and it's the one where you build the thing only you could think of.
+
+[repo]: https://github.com/btholt/family-recipe-box-broken

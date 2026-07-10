@@ -34,7 +34,7 @@ Read it — you can, entirely: call the function with known inputs, `expect` the
 
 Why this matters for _you_, specifically, is the tripwire framing: as a codebase grows and an agent keeps changing it, tests are what make change **safe**. That lap around the neighbors after every fix? A test suite _is_ that lap, automated, run in seconds, every time — a field of tripwires around everything that's ever worked, so that when a change breaks something three files away, the tripwire fires _now_, loudly, at the moment of the mistake. Fail loud, fail fast, industrialized. And the labor economics are on your side: **agents write good tests, cheaply** — the professional move is simply to ask for them with the feature ("...and add unit tests for the scaling logic"), and a spec line like "all existing tests must still pass" turns your whole suite into a constraint the agent works within.
 
-Calibration, so you don't gold-plate: tests are code too, with maintenance costs, and not every line deserves one. The priorities are logic with _right answers_ (calculations, filters, transformations — anything where correct is checkable) and anything that's bitten you before. Which foreshadows the support shift ahead: the professional bug-fix ritual is _write a test that reproduces the bug and fails, then fix until it passes_ — red, then green — so every bug you ever fix leaves a permanent tripwire on its grave.
+Calibration, so you don't gold-plate: tests are code too, with maintenance costs, and not every line deserves one. The priorities are logic with _right answers_ (calculations, filters, transformations — anything where correct is checkable) and anything that's bitten you before. Which foreshadows the bug backlog ahead: the professional bug-fix ritual is _write a test that reproduces the bug and fails, then fix until it passes_ — red, then green — so every bug you ever fix leaves a permanent tripwire on its grave.
 
 ## End-to-end tests, and the agent gets browser hands
 
@@ -75,4 +75,4 @@ And the graduation move, cashing something you met on the codebase walk: rules t
 - E2E drives a real browser through mission-critical flows — a precious few of them. The Playwright MCP gives your agent browser hands: self-verifying its own features, and generating permanent tests from plain sentences.
 - The house defaults, paste-able into every spec: minimal issues-only ESLint, empty-object Prettier, Vitest with tests written as features are built (common cases and edges), E2E for core flows only — no flaky tests, when in doubt leave it out — every milestone ends green, and the suite stays pruned. Post it once in the agent instruction file and every session inherits it.
 
-Next: the support shift. A repo full of other people's bugs, tickets and all — and every fix leaves a tripwire behind.
+Next: you inherit a bug backlog. A repo full of other people's bugs, tickets and all — and every fix leaves a tripwire behind.
