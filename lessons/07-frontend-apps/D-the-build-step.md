@@ -83,4 +83,4 @@ I've now used npm four times without introducing it, so, briefly: **npm is the a
 
 Next: the pet app rides again — same app, third form, and this time it's React all the way down.
 
-[linux]: https://master.dev/courses/linux-command-line/
+[linux]: https://holt.fyi/linux

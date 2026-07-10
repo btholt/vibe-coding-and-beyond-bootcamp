@@ -159,5 +159,5 @@ Generated React contains more React than this — most visibly `useEffect(...)`,
 
 Next: making all of this beautiful without writing a stylesheet — the utility-class approach your generated apps almost certainly already use.
 
-[react]: https://master.dev/courses/complete-react-v9/
-[intermediate]: https://master.dev/courses/intermediate-react-v6/
+[react]: https://holt.fyi/react
+[intermediate]: https://holt.fyi/intermediate-react

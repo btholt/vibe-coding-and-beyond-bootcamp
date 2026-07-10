@@ -90,4 +90,4 @@ You are not going to author types in this course. The agent writes them, the che
 
 Next: the biggest reading upgrade in this section — what all those `.tsx` files actually are, and why there's HTML living inside the JavaScript.
 
-[ts]: https://frontendmasters.com/learn/typescript/
+[ts]: https://holt.fyi/ts

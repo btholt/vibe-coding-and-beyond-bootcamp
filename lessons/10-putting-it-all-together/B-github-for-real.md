@@ -1,0 +1,46 @@
+---
+title: "GitHub for Real"
+description: "The promissory note from the git lesson, cashed: push, branches, and pull requests — which turn out to be the native workflow of coding agents. Brian covers the cloud half of git, the PR as a diff review at repo scale, and your first agent-opened pull request."
+---
+
+Way back in the git lesson, you learned the save system — commits, the local half — and I explicitly deferred the rest: pushing, branches, pull requests, "real coverage soon, when we tour GitHub properly." This is the tour, and the timing isn't arbitrary. These three ideas used to be teachable as "collaboration features you'll need when you join a team." That's still true, but something better happened: **branches and pull requests turned out to be the native language of coding agents.** The most capable agent workflows — the ones where you hand off a task and review finished work — are built out of exactly the machinery in this lesson. You're not learning team etiquette on spec; you're learning how your most powerful tools deliver their work.
+
+## Push: your repo's cloud twin
+
+Everything git-related so far has lived entirely on your laptop, which means one spilled coffee stands between your projects and oblivion. The fix: every local repo can have a **remote** — a twin copy hosted on GitHub — and **push** is how your commits travel up to it (with **pull** bringing commits back down, which you've technically done once: cloning the calculator was one big initial pull).
+
+Do it right now with the pet tinder repo: VS Code's Source Control panel has a **Publish to GitHub** button that creates the remote and pushes in one motion. That's it — your code is _on GitHub_, a sentence that is now completely demystified end to end: a repo, twinned to the cloud, at a URL you could send to anyone. From here on, the rhythm adds one beat: commit (save point), then push (save point, _offsite_). Commit early and often like always; push when you want the cloud to have it — which for solo work can be simply "whenever you stand up."
+
+One vocabulary decoder while we're here, because you'll see it constantly in terminal output and agent messages: **origin** is just the default nickname for your remote (as in "push to origin"), and `origin/main` means "the main branch, as the remote last saw it." Jargon, defused.
+
+## Branches: parallel timelines
+
+Speaking of `main` — that's the name of the branch you've been on this whole time without knowing branches existed. A **branch** is a parallel line of commits: a place to build something _away from_ the known-good version, and the natural evolution of a habit you already have. Commit-before-you-experiment gave you a save point to retreat to; a branch gives the experiment _its own timeline_ — main stays pristine and shippable while the experiment accumulates as many commits as it needs, and nothing touches main until the work is deliberately **merged** back in. Big feature, risky refactor, "not sure this idea is good": branch material. VS Code shows your current branch in the bottom-left corner, and switching is a click — the folder's contents literally change to match whichever timeline you're standing on, which is delightfully spooky the first time you watch it happen.
+
+> The word you may have heard, decoded preemptively: a **merge conflict** is what happens when two timelines changed the _same lines_ and git — refusing to guess — asks a human to pick. It looks alarming (angle-bracket markers stamped into your files) and it's actually mundane: here's version A, here's version B, choose. Modern agents are genuinely good at resolving them when you explain your intent. File under "scary name, mundane cause," next to its friends.
+
+> Two more branch-adjacent notes to inoculate you. First, a naming history: the default branch is called `main` today, but for most of git's life it was called `master`, and the old name is still lying around — older repos, older tutorials, older muscle memory in older developers. Same branch, same job; the name isn't important, but you'll see it, and now it won't throw you. Second: there are entire competing philosophies about the _right_ way to branch and merge — you may hear names like "git flow" and "trunk-based development," and picky people are genuinely picky about them. You do not need to care. Know that they exist, know that they're workflow opinions rather than laws (a pattern you'll recognize from REST), and branch however keeps your own work reviewable.
+
+## Pull requests: the diff review, at scale
+
+Now the piece the whole lesson has been building toward. A **pull request** (PR) is a proposal: "here's a branch full of work — review it, and if it's good, merge it into main." On GitHub, a PR is a page with three faces: the **conversation** (what this change is and why, plus discussion), the **commits** (the save-point history of the work), and the one you'll live in — **Files changed**, which is _the diff_. Every addition in green, every deletion in red, across every file the branch touched.
+
+Read that description again with course eyes, because you should be having a recognition moment: a PR is **diff-reading — the skill you've practiced since the loops lesson — promoted to a formal ceremony with an approve button.** You've been reviewing your agent's diffs in the Source Control panel all course; a PR is the same act with a permanent record, a place for comments, and an explicit decision at the end. That's why this matters _now_: the most capable agent workflows are PR-shaped. Cloud coding agents — the kind you assign a task and walk away from — deliver their work by opening a branch, doing the work there, and opening a PR _at you_. Your job in that world is exactly the job this course trained: read the diff, trace the suspicious parts, ask why-questions, and only then click merge. The button is new; the job is not.
+
+So let's run the loop once, for real. Watch-me, then you do it: I take a small, well-scoped task — "add a footer with attribution to the pet tinder app" is about right — and hand it to the agent in its delegated mode with the instruction to **do the work on a new branch and open a pull request.** Then we go to GitHub and review like it's our job, because it is: read the conversation tab's summary, open Files changed, read every green and red line (it's a small diff — that was deliberate), leave one comment on anything worth remarking, and merge. Then, the step everyone forgets the first time: back in VS Code, **pull** — main moved on the remote when you merged, and your local twin needs to catch up. Commit, push, branch, PR, review, merge, pull: that's the full modern loop, and you just ran all of it.
+
+## GitHub as a place to read
+
+One more reframe before the next lesson cashes it: GitHub isn't just where _your_ code lives — it's where nearly _all_ code lives, and you now have full citizenship. Any repo's front door is its **README** (you've written these); its **Issues** tab is the project's public memory — known bugs, planned features, discussions — which makes it both the first place to check when a dependency misbehaves ("is this broken for everyone or just me?") and where you'd file a report yourself. Every dependency in every `package.json` you've ever read has a repo like this, and walking into one no longer requires courage. The next lesson is exactly that walk, at full length, on a codebase you've never seen.
+
+> 🤖 **Ask your AI Assistant.** Put the GitHub MCP server from last lesson to work on the PR you just merged: "Using your GitHub tools, find the most recent merged pull request in my pet tinder repo and summarize what it changed and whether anything about it looks risky." You reviewed that PR with your own eyes minutes ago, so you hold the answer key — audit the summary. Then the forward-looking one: "If I asked an agent to add a delete-account feature to this app on a branch, what would you want the PR description to include so I could review it well?" The answer is a template for every task you'll ever hand to a cloud agent — and asking your tools how to make _their own work_ more reviewable is exactly the kind of move this course has been sneaking up on all along.
+
+## Recap
+
+- A remote is your repo's cloud twin; push sends commits up, pull brings them down; **origin** is just the remote's default nickname. New rhythm: commit early and often, push whenever you stand up.
+- A branch is a parallel timeline — the commit-before-experiment habit given its own workspace. Main stays shippable; the experiment merges in only when it's earned it. Merge conflicts are two timelines touching the same lines: scary name, mundane cause.
+- A pull request is diff-reading promoted to a ceremony: conversation, commits, Files changed, merge button. Agent workflows are PR-shaped, which makes PR review the professional form of the job this course trained you for.
+- The full loop, which you've now run: commit → push → branch → PR → review → merge → pull.
+- GitHub is where nearly all code lives; READMEs are front doors and Issues are a project's public memory. You have citizenship now.
+
+Next: we walk into a full codebase neither of us has apologized for yet, and read the whole thing.

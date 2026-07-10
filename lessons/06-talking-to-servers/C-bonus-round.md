@@ -4,4 +4,4 @@ Fair warning: it's a genuinely meatier build, which makes the _reading_ meatier 
 
 > Want the artisanal version? Building Wordle from scratch, by hand, every line yours, is the capstone project of my [Complete Intro to Web Dev v3][webdev] — free to watch, and a great "what does authoring actually feel like" follow-up once this course has you reading fluently.
 
-[webdev]: https://frontendmasters.com/courses/web-development-v3/
+[webdev]: https://holt.fyi/web-dev
