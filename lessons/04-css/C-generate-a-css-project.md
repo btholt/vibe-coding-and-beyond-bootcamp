@@ -1,3 +1,7 @@
+---
+title: "Generate a CSS Project"
+---
+
 Now that you've hand-written some HTML and CSS, let's do something you couldn't do a week ago: prompt an AI to generate some code, and actually understand what it hands back.
 
 If you don't have GitHub Copilot enabled in VS Code yet, take a minute to do that now. Open the Extensions panel (the square icon on the left sidebar), search for "GitHub Copilot," and install it. Sign in with your GitHub account when prompted — the free tier is generous and works fine for what we're doing here.
