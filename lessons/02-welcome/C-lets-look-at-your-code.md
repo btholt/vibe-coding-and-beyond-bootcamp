@@ -1,3 +1,7 @@
+---
+title: Let's Look at Your Code
+---
+
 Let's take your project from Replit (or one of them) and download it.
 
 Open the right bar on Replit if you haven't already.
