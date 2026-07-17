@@ -28,7 +28,7 @@ This json file allows you to configure the details of the site. Update the info 
 - _authors[].image_ – The file name of the author's image in `public/images/`. Optional, defaults to `author.jpg`. If you add a second author, drop their image into `public/images/` and reference it here (e.g. `second-author.jpg`).
 - _title_ – The title of your course
 - _subtitle_ – The subtitle of your course. Optional.
-- _frontendMastersLink_ – A link to the published video on FrontendMasters.com. Optional.
+- _frontendMastersLink_ – A link to the published video on Master.dev. Optional.
 - _social.linkedin_ - Your LinkedIn public user name, just the name, not the full link. Optional
 - _social.twitter_ – Your Twitter user name. Optional.
 - _social.github_ – Your GitHub user name. Optional.
@@ -70,7 +70,7 @@ All your markdown lesson files will go in `lessons/`. They **must** be organized
 
 The folders must be named `01-section-one-name`, `02-section-two-name`, `03-section-three`, etc.
 
-The lessons are then grouped inside of these, the lessons are ordered by letters, `A-lesson-one.md`, `B-lesson-two.md`, `C-lesson-three.md`, etc. This numbering scheme matches how Frontend Masters organizes their content.
+The lessons are then grouped inside of these, the lessons are ordered by letters, `A-lesson-one.md`, `B-lesson-two.md`, `C-lesson-three.md`, etc. This numbering scheme matches how Master.dev organizes their content.
 
 The titles of your lessons and sections are generated from the folder and lesson names (and can be overridden.) The first, organizing part of the name is stripped (the `01-` part of `01-section-one` and the `A-` part of `A-lesson-one`), the hyphens are turned into spaces (`section-one` becomes `section one`) and then those are run through [title-case](https://github.com/blakeembrey/change-case#titlecase) (so `section one` becomes `Section One`.) If you need to override these, use the frontmatter (explained below.)
 
@@ -79,7 +79,7 @@ The folder and lesson names are also used for the slugs. `02-section-two/C-lesso
 Each of these lessons can have a [frontmatter](https://github.com/jonschlinkert/gray-matter#readme) for the following properties
 
 - _title_ – If you want the title to be different from the file name, you can specify here what that title should be. Frequently this useful for things where the capitalization would be off e.g. TailwindCSS instead of Tailwindcss. Optional.
-- _description_ – If you want to give individual lessons descriptions for SEO and for Frontend Masters, you can write a brief description here.
+- _description_ – If you want to give individual lessons descriptions for SEO and for Master.dev, you can write a brief description here.
 - _keywords_ - If you want to give individual lessons keywords for SEO purposes, write a comma separated list
 
 🤖: now the course starter can auto-generate the description and keywords for you using AI (Claude or GPT). See below how to.
@@ -138,7 +138,7 @@ _Future pushes to the main branch will automatically trigger a new deployment._
 
 ## Analytics
 
-By default this doesn't generate any analytics. If you are creating a Frontend Masters course and would like a weekly report of analytics, contact me (Brian Holt) and I'll give you a snippet to drop on your page (though fair warning, I will also have access to your data, if that bothers you.)
+By default this doesn't generate any analytics. If you are creating a Master.dev course and would like a weekly report of analytics, contact me (Brian Holt) and I'll give you a snippet to drop on your page (though fair warning, I will also have access to your data, if that bothers you.)
 
 Otherwise I'm pretty pleased with [Simple Analytics](referral.simpleanalytics.com/brian) (this is a referral link, free month for me and free month for you); I've been using them for my courses personally.
 

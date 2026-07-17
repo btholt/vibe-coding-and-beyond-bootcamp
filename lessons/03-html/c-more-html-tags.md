@@ -54,7 +54,7 @@ Now let's run through the tags you'll see most often inside the body. I'm not go
 
 **Paragraphs — `<p>`.** A block of text. The browser puts some space around paragraphs by default to separate them visually. Only text (and inline tags like `<em>` and `<span>`) goes inside a `<p>`.
 
-**Anchors — `<a>`.** A link. Every `<a>` needs an `href` attribute that says where the link goes. Looks like `<a href="https://frontendmasters.com">Frontend Masters</a>`. If the `href` starts with `http://` or `https://` it's a full URL that goes anywhere on the web. If it starts with `/` it's a link to somewhere on the same site.
+**Anchors — `<a>`.** A link. Every `<a>` needs an `href` attribute that says where the link goes. Looks like `<a href="https://master.dev">Master.dev</a>`. If the `href` starts with `http://` or `https://` it's a full URL that goes anywhere on the web. If it starts with `/` it's a link to somewhere on the same site.
 
 **Emphasis — `<em>` and `<strong>`.** Both add emphasis to text inline. `<em>` traditionally renders as italics, `<strong>` as bold, but again, the visual is secondary. Semantically, `<em>` means "emphasized" and `<strong>` means "this is important." Use these inside paragraphs to make a word or phrase stand out.
 

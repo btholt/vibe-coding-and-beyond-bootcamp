@@ -56,7 +56,7 @@ export default function Lessons({ sections }) {
         </div>
         {courseInfo.frontendMastersLink ? (
           <a href={courseInfo.frontendMastersLink} className="cta-btn">
-            Watch on Frontend Masters
+            Watch on Master.dev
           </a>
         ) : null}
         <div className="main-card">
