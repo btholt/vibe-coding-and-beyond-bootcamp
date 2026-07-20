@@ -1,3 +1,7 @@
+---
+title: "A Whirlwind Tour of CSS"
+---
+
 We've spent three lessons on HTML. You wrote a blog, and if you opened it in your browser, you noticed it looks like it was made in 1996. Times New Roman, black text on white, everything jammed against the left edge, no room to breathe. That's the browser's default styling — technically correct but visually unpleasant.
 
 CSS is how we fix that. But before we get into the mechanics, here's a mental model for how a whole webpage is put together.
