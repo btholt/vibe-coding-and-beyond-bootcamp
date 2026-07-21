@@ -2,7 +2,7 @@ We have several tools that we will be using over the course of this workshop. Le
 
 ## Replit
 
-[Click here to sign up][replit] (**TODO: this is Brian's referral link - I'm just trying to make it easy for Replit to track where the sign up came from**)
+[Click here to sign up][replit]
 
 Replit is a phenomenal AI agent coding tool. This is what we'll use for the first half of the course for you to take your ideas to working apps. You'll need an account here and we'll give you some free credits to get started with. This is a website you will use, and not a program you will download. Replit does have some free usage, but generally you'll need to pay to get the most out of Replit.
 
