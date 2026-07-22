@@ -42,7 +42,7 @@ Now, in VS Code:
 
 1. Open the Command Palette — Cmd-Shift-P on Mac, Ctrl-Shift-P on Windows. (This is VS Code's "just type what you want" box, and it's how I do half of everything.)
 2. Type "clone" and pick **Git: Clone**.
-3. Paste in the calculator repo's address: `https://github.com/btholt/vibe-coding-bootcamp-calculator`
+3. Paste in the calculator repo's address: `https://github.com/btholt/calculator-masterdotdev`
 4. Pick a spot for it (I keep a folder just for code projects), and when it asks, open the cloned repo.
 
 That's it. You now have the complete calculator project — the same kind of code your Copilot-built calculator is made of — sitting on your machine with its full history attached. If VS Code asks you to sign in to GitHub along the way, let it; that handshake pays dividends later.
