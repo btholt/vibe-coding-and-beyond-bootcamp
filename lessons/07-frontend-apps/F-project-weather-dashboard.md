@@ -4,7 +4,7 @@ description: "A bonus build for the ambitious: a weather dashboard in React, fea
 
 Entirely optional, entirely on your own time, and entirely worth it if you've got the appetite: a weather dashboard. Type a city, get the forecast. It sounds like less app than pet tinder, and it's more — because it exercises a set of muscles the pet saga never touched: a search box (your first controlled input in the wild), an API where one request's answer feeds the next request (your first _chain_), and a response that arrives in code numbers your app has to translate into human words. These three patterns are everywhere in real apps, and none of them have come up in a project yet. That's why this doc exists.
 
-The data comes from [Open-Meteo][openmeteo], and it's worth knowing why I chose it: free, no API key, no signup, run as an open-source project aggregating _government weather models_ — about as stable and litigation-proof as data gets, because nobody owns the rain. Their one ask is fair: free use requires a small credit, so your spec will include an "Weather data by Open-Meteo" line in the footer. Free things on the internet often ask exactly this, and building the courtesy into your first API-consuming habit is good citizenship.
+The data comes from [Open-Meteo][openmeteo], which is a great free API for getting weather data (and frequently used as an example app.)
 
 ## Rehearse the chain — by hand
 
