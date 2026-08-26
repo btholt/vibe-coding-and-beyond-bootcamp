@@ -36,7 +36,7 @@ Please catch up with me on social media! Be aware that I'm awful at responding t
 
 ## Where to file issues
 
-I write these courses with a lot of care, but across this many hours of material, mistakes are inevitable — in the grammar, in the code, occasionally in my opinions (rarely — ask anyone). If you find one, the best thing you can do is open an issue or a pull request on this course's GitHub repo: that way it gets fixed, and everyone who comes after you gets a better course and can Google the same answer you got. I'm always happy to chat on social media, but I can't be tech support for everyone — GitHub is the way. (And conveniently, filing a good issue is _literally a skill this course teaches_, so consider it extra credit.)
+I write these courses with a lot of care, but across this many hours of material, mistakes are inevitable — in the grammar, in the code, occasionally in my opinions (rarely — ask anyone). If you find one, the best thing you can do is open an issue or a pull request on [this course's GitHub repo](https://github.com/btholt/vibe-coding-and-beyond-bootcamp) that way it gets fixed, and everyone who comes after you gets a better course and can Google the same answer you got. I'm always happy to chat on social media, but I can't be tech support for everyone — GitHub is the way. (And conveniently, filing a good issue is _literally a skill this course teaches_, so consider it extra credit.)
 
 ## Special thanks
 
